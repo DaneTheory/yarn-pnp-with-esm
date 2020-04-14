@@ -1,0 +1,24 @@
+{
+  "name": "yarn-pnp-with-esm",
+  "private": true,
+  "engines": {
+    "node": "13.x",
+    "yarn": ">= 2.0.0"
+  },
+  "workspaces": [
+    "packages/**"
+  ],
+  "main": "./index.js",
+  "scripts": {
+    "start": "yarn node -r esm ."
+  },
+  "dependencies": {
+    "lib": "workspace:*"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  },
+  "resolutions": {
+    "esm": "3.2.25"
+  }
+}
